@@ -1,0 +1,22 @@
+{
+  "name": "pekanan-5",
+  "version": "1.0.0",
+  "description": "Tugas Pekanan 5",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davagaluhd/Pekanan-5.git"
+  },
+  "author": "Dava Galuh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davagaluhd/Pekanan-5/issues"
+  },
+  "homepage": "https://github.com/davagaluhd/Pekanan-5#readme",
+  "dependencies": {
+    "cypress": "^10.11.0"
+  }
+}
