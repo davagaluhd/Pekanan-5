@@ -1,23 +1,21 @@
 describe('Test Login kasirAja', () => {
-    it('should open login page first', () => {
+    it('Open Login Page', () => {
       cy.visit('https://kasirdemo.belajarqa.com')
       cy.url().should('include', '/login')
     })
   
-    it('input valid username dan password then Login', () => {
+    it('Success login using valid data', () => {
       cy.visit('https://kasirdemo.belajarqa.com')
       cy.get('#email').type("davagaluh22@gmail.com")
       cy.get('#password').type("tokohariini")
       cy.contains("login").click()
   
-      // should be redirected to dashboard page /dashboard
       cy.url().should('include', '/dashboard')
   
-      // should contains text "kasirAja"
       cy.contains("kasirAja")
     })
 
-    it('User can add product', () => {
+    it('Add Product', () => {
         cy.get('#root > div > div > div.css-tnxwfz > div > a:nth-child(7) > div > div > div').click()
         cy.get('#root > div > div > div.css-1r35f0l > div.chakra-container.css-9rmdie > div.css-1t33j5j > a').click()
         cy.get('#nama').type("New Product")
@@ -32,10 +30,9 @@ describe('Test Login kasirAja', () => {
         cy.get('#root > div > div > div.css-1r35f0l > div.chakra-container.css-9rmdie > div.css-1t33j5j > button').click()
   
     
-        // should be redirected to products page /products
         cy.url().should('include', '/products')
     
-        cy.contains("success") //Expect memiliki kata 'success' setelah berhasil add product
-        cy.contains("item ditambahkan") //Expect memiliki kata 'item ditambahkan' setelah berhasil add product
+        cy.contains("success")
+        cy.contains("item ditambahkan")
       })
 })
